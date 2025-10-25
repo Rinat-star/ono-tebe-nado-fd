@@ -16,7 +16,7 @@ body {
   align-items: center;
   height: 293px;
 }
- .nav ul{
+ .nav ul {
   display: flex;
   list-style: circle;
   gap: 34px;
@@ -39,7 +39,7 @@ body {
 
 .list_contacts {
   height: 98px;
-  width: 240px;;
+  width: 240px;
   justify-self: end;
   font-style: normal;
   margin-right: 50px;
@@ -115,7 +115,6 @@ body {
   z-index: 2;
   height: 51px;
   width: 1000px;
-  font-size: 22px;
   text-transform: uppercase;
   word-spacing: 0.85em;
   font-weight: 100;
