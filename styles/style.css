@@ -14,7 +14,8 @@ body {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  height: 293px;
+  padding-bottom: 95px;
+  padding-top: 95px;
 }
  .nav ul {
   display: flex;
@@ -56,6 +57,7 @@ body {
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
 }
 
 .overlay {
@@ -69,8 +71,8 @@ body {
 }
 
 .cover_title {
+  position: absolute;
   z-index: 2;
-  height: 385px;
   width: 1000px;
   margin: 165px 50px 207px;
 }
@@ -86,18 +88,18 @@ body {
   letter-spacing: 0.3em;
 }
 
-.first_word {
+.left_word {
   align-self: flex-start;
   margin-top: -1px;
 }
 
-.second_word {
+.center_word {
   align-self: center;
   margin: 18px 0;
   margin-right: -30px;
 }
 
-.third_word {
+.right_word {
   align-self: flex-end;
   margin-top: -1px;
   margin-right: -30px;
@@ -105,8 +107,8 @@ body {
 
 .description {
   position: relative;
-  top: 656px;
-  left: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
   font-size: 22px;
   color: #FFFFFF;
   display: flex;
@@ -118,11 +120,12 @@ body {
   text-transform: uppercase;
   word-spacing: 0.85em;
   font-weight: 100;
+  align-self: flex-end;
 }
 
 .button {
   background: transparent;
-  border: solid 1px #FFFFFF;
+  border: solid 1px currentColor;
   padding: 12px 32px;
   margin: 0;
   color: inherit;
@@ -132,7 +135,6 @@ body {
 }
 
 .lots {
-  height: 723px;
   width: 1052px;
   margin: 180px 24px 120px;
 }
@@ -152,10 +154,32 @@ body {
   justify-content: space-between;
 }
 
+.film_lot {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.book_lot {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.picture_lot {
+  background-image: url(../images/card-lot-03.jpg);
+}
+
 .lot {
   width: 334px;
-  height: 596px;
+  min-height: 596px;
   position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.lot a article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 
 .lot_title {
@@ -173,33 +197,15 @@ body {
 }
 
 .lot_text {
-  position: absolute;
-  right: 40px;
-  left: 40px;
-  bottom: 48px;
+  position: relative;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 48px;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   z-index: 2;
   color: #FFFFFF;
-}
-
-.first_lot {
-  background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.second_lot {
-  background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.third_lot {
-  background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .more {
@@ -211,7 +217,6 @@ body {
 }
 
 .about {
-  height: 595px;
   width: 1052px;
   margin: 0 24px 180px;
   display: grid;
@@ -258,7 +263,7 @@ img {
 }
 
 .footer {
-  height: 180px;
+  padding-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
